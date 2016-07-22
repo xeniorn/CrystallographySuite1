@@ -53,6 +53,16 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=cm;User ID=crystal;Password=crystal;Unicode=True")>  _
+        Public ReadOnly Property CMConnectionString() As String
+            Get
+                Return CType(Me("CMConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
